@@ -1,0 +1,27 @@
+1. Import list of movies -- output table
+2. Get wikipedia pages - output pages (wikipedia object)
+3. Scrape film wiki page for cast -- output list of actors
+4. Find birthday of actors -- output birthday
+5. Find nationality of actors -- output nationality
+
+
+import pandas as pd #for making dataframes
+import urllib #for urls
+from html.parser import HTMLParser #for reading html
+from bs4 import BeautifulSoup #for manipulating web pages
+import requests #not sure
+import xlsxwriter #for writing to excel
+import numpy as np
+from urllib.request import urlopen
+import urllib.request
+import wikipedia as wk
+
+#1. Import list of movies -- output table (Dataframe)
+
+film_data = pd.read_csv('film.csv', quotechar='"')
+
+
+#2. Get wikipedia pages - output pages (wikipedia object)
+
+for movie in film_data:
+  
