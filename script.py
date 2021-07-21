@@ -1,8 +1,8 @@
-1. Import list of movies -- output table
-2. Get wikipedia pages - output pages (wikipedia object)
-3. Scrape film wiki page for cast -- output list of actors
-4. Find birthday of actors -- output birthday
-5. Find nationality of actors -- output nationality
+#1. Import list of movies -- output table
+#2. Get wikipedia pages - output pages (wikipedia object)
+#3. Scrape film wiki page for cast -- output list of actors
+#4. Find birthday of actors -- output birthday
+#5. Find nationality of actors -- output nationality
 
 
 import pandas as pd #for making dataframes
@@ -40,7 +40,7 @@ for x in enumerate(movie_np[0:600]):
 
 film_wiki = df.loc[lambda df: df["Wiki"]!="error", :]
    
-3. Scrape film wiki page for cast -- output list of actors
+#3. Scrape film wiki page for cast -- output list of actors
 
 def starring(movie_wiki):
     wikisoup = BeautifulSoup(movie_wiki.html(), 'html.parser')
@@ -79,7 +79,7 @@ list_of_wikis = [i for i in film_wiki["Wiki"]]
 dicts = []
 wikinp = np.array(list_of_wikis)
 
-for i in range(0,445): 
+for i in range(0,len(list_of_wikis): 
     try:
         alist = starring(wikinp[i])   
         filmdict = {list_of_films[i] : alist}
